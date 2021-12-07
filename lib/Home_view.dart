@@ -1,4 +1,7 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
+import 'package:todoapp/create_todo_view.dart';
 
 class MyTodo_app extends StatelessWidget {
   const MyTodo_app({Key? key}) : super(key: key);
@@ -58,6 +61,17 @@ class MyTodo_app extends StatelessWidget {
               ],
             ),
           ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return CreateTodo();
+          }));
+        },
+        child: Icon(
+          Icons.add,
+          size: 40,
         ),
       ),
     );
